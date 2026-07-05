@@ -1,6 +1,5 @@
 name: SAST SCAN
 on: push
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,6 +8,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v4
+      continue-on-error: true
       with:
         java-version: '17'
         distribution: 'adopt'
